@@ -290,7 +290,7 @@ PEP 8
     \ set textwidth=79 |
     \ set expandtab |
     \ set autoindent |
-    \ set fileformat=unix |
+    \ set fileformat=unix
 
 这些设置将让 Vim 中的 Tab 键就相当于 4 个标准的空格符，确保每行代码长度不超过 80 个字符，并且会以 unix 格式储存文件，避免在推送到 Github 或分享给其他用户时出现文件转换问题。
 
@@ -301,7 +301,7 @@ PEP 8
     au BufNewFile,BufRead *.js, *.html, *.css
     \ set tabstop=2 |
     \ set softtabstop=2 |
-    \ set shiftwidth=2 |
+    \ set shiftwidth=2
 
 自动缩进
 *****************************
@@ -319,6 +319,8 @@ PEP 8
 
 ::
 
+    " Flagging Unnecessary Whitespace
+    highlight BadWhitespace ctermbg=red guibg=darkred
     au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
 这会将多余的空白字符标示出来，很可能会将它们变成红色突出。
@@ -414,7 +416,7 @@ YouCompleteMe 插件其实底层使用了一些不同的自动补全组件（包
       set background=dark
       colorscheme solarized
     else
-      colorscheme Zenburn
+      colorscheme zenburn
     endif
 
 Solarized 方案同时提供了暗色调和轻色调两种主题。要支持切换主题功能（按F5）也非常简单，只需添加：
@@ -514,7 +516,28 @@ Vim 的设置到这里就差不多了（至少对于 Python 开发来说是这�
 
 
 
+转到定义快捷方式不起作用解决方法
+*****************************
 
+原配置方法：
+
+::
+
+    let g:ycm_autoclose_preview_window_after_completion=1
+    map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+
+这里的 leader 是指自己自定义 vim 组合快捷键的时候的第一个键，原作者是空格键，你要看一下自己的 leader 快捷键是哪一个,如果你第一步安装成功了，那么 mapleader 应该是逗号 ``,`` ，然后再用 map 命令看一下 g 是否已经被用了。
+
+::
+
+    :map
+
+最后我的配置把 g 调整成了 q：
+
+::
+
+    let g:ycm_autoclose_preview_window_after_completion=1
+    map <leader>q :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 
 
