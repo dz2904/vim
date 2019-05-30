@@ -1,13 +1,13 @@
 Vim 搭建 Python 环境
 #############################
 
-.. image:: ./images/vimandpython01.jpg
+.. image:: ../images/vimandpython01.jpg
 
 Vim 编辑器无处不在，速度快，从来不会崩溃。并且，它能做任何事情！不过，不利之处也有，就是 Vim 配置起来很让人头疼。但是，别担心！本文将告诉你如何配置一个强大的 Vim 环境，专门用于天天捣鼓 Python 开发。
 
 下面是最终效果预览。
 
-.. image:: ./images/vimandpython02.jpg
+.. image:: ../images/vimandpython02.jpg
 
 .. note::
 
