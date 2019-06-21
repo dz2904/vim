@@ -428,11 +428,15 @@ Solarized 方案同时提供了暗色调和轻色调两种主题。要支持切�
 文件浏览
 *****************************
 
-如果你想要一个不错的文件树形结构，那么 NERDTree 是不二之选。
+如果你想要一个不错的文件树形结构，那么 `NERDTree`_ 是不二之选。
+
+.. _`NERDTree`: https://github.com/scrooloose/nerdtree
 
 ::
 
     Plugin 'scrooloose/nerdtree'
+
+配置参考： https://segmentfault.com/a/1190000015143474
 
 如果你想用tab键，可以利用 vim-nerdtree-tabs 插件实现：
 
