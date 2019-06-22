@@ -81,11 +81,10 @@ Debian 或 Ubuntu 系统，可以使用下面的代码：
 
 ::
 
-    sudo apt-get remove vim-tiny
     apt-get update
-    apt-get install vim
+    apt-get install vim-nox
 
-如果是其他版本的 Linux 系统，请查阅相应版本包管理器的文档。
+vim-nox 支持脚本语言.安装时最好直接安装 vim-nox。如果是其他版本的 Linux 系统，请查阅相应版本包管理器的文档。
 
 Windows
 =============================
