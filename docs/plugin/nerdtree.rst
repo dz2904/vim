@@ -11,7 +11,7 @@ NERDTree 是 Vim 编辑器的文件系统资源管理器。使用此插件，用
 
     Plugin 'scrooloose/nerdtree'
 
-Vundle 安装插件的详细方法请参考 :ref:`链接 <vundle>` 。
+Vundle 安装插件的详细方法请参考 :ref:`链接 <vundle-install>` 。
 
 快速配置
 ************************
