@@ -89,4 +89,4 @@ Vim 默认是启用环形搜索的，就是说在到达搜索单词的最后一�
 .. image:: ../images/search04.png
    :width: 600 px
    
-如果以上的信息没有过瘾，请前往 `Vim 官方文档 <https://vim.fandom.com/wiki/Searching>` 获得更多技巧。
+如果以上的信息没有过瘾，请前往 `Vim 官方文档 <https://vim.fandom.com/wiki/Searching>`_ 获得更多技巧。
