@@ -31,3 +31,7 @@ Vundle 安装插件的详细方法请参考 `链接 <./vundle.rst>`_ 。
 
     " 不显示 .pyc 文件
     let NERDTreeIgnore = ['\.pyc$']
+    
+    " 定义窗口位置及窗口大小
+    let NERDTreeWinPos='right'
+    let NERDTreeWinSize=30
