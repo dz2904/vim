@@ -83,6 +83,6 @@ Vim 默认是启用环形搜索的，就是说在到达搜索单词的最后一�
 
 在搜索完成后通过按 ``[I`` 可以获得所有搜索单词匹配处所在的行和行号的列表。
 
-.. image:: ../images/search03.png
+.. image:: ../images/search04.png
 
 如果以上的信息没有过瘾，请前往 `Vim 官方文档 <https://vim.fandom.com/wiki/Searching>` 获得更多技巧。
