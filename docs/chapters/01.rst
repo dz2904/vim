@@ -7,5 +7,5 @@
    :maxdepth: 2
    :glob:
 
-   ../basic/*
    基本操作命令 <http://data.dongxg.top/VimOperating.pdf>
+   ../basic/*
