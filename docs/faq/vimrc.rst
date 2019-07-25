@@ -2,7 +2,9 @@ Vim 配置文件
 #############################
 
 首先，安装 Vundle 插件管理器 ``git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim`` 。
+
 然后，将配置文件复制到 ``～/.vimrc`` 中。
+
 最后，打开 vim 键入 ``:PluginInstall`` 命令安装所以插件。
 
 要求：
@@ -15,6 +17,8 @@ Vim 配置文件
     
     Powerline 需要参考官方文档安装插件及字体， `参考链接 <https://powerline.readthedocs.io/en/latest/installation/linux.html>`_ 。
     在 Debian 10 环境中，配置文件直接放入 /etc/fonts/conf.d/ 目录下。
+    
+    completor.vim 需要 jedi 支持。
 
 基本配置文件
 *****************************
