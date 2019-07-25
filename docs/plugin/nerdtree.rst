@@ -20,9 +20,11 @@ Vundle 安装插件的详细方法请参考 `链接 <vundle.html#id6>`_ 。
 
 ::
 
+    Plugin 'scrooloose/nerdtree'
+    
     " 启动 vim 时自动打开 NERDTree
     autocmd vimenter * NERDTree
-
+    
     " 只剩 NERDTree 窗口时关闭 vim
     autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
@@ -33,5 +35,11 @@ Vundle 安装插件的详细方法请参考 `链接 <vundle.html#id6>`_ 。
     let NERDTreeIgnore = ['\.pyc$']
     
     " 定义窗口位置及窗口大小
-    let NERDTreeWinPos='right'
-    let NERDTreeWinSize=30
+    let NERDTreeWinPos='left'
+    let NERDTreeWinSize=25
+    
+    " 定义切换窗口的快捷键
+    nnoremap <C-J> <C-W><C-J>
+    nnoremap <C-K> <C-W><C-K>
+    nnoremap <C-L> <C-W><C-L>
+    nnoremap <C-H> <C-W><C-H>
