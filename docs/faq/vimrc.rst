@@ -114,4 +114,3 @@ Vim 配置文件
     set laststatus=2
     set noshowmode
     set t_Co=256
-
