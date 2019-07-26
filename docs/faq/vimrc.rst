@@ -110,7 +110,7 @@ Vim 配置文件
     let g:completor_python_binary = '/path/to/python/with/jedi/installed'
     
     " Plugin 'Lokaltog/powerline'
-    set rtp+=/home/xiao/.local/lib/python3.7/site-packages/powerline/bindings/vim/
+    set rtp+=~/.local/lib/python3.7/site-packages/powerline/bindings/vim/
     set laststatus=2
     set noshowmode
     set t_Co=256
