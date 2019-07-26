@@ -95,6 +95,8 @@ Vim 配置文件
     
     Plugin 'scrooloose/nerdtree'
     autocmd vimenter * NERDTree
+    wincmd w
+    autocmd VimEnter * wincmd w
     autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
     map <C-f> :NERDTreeToggle<CR>
     let NERDTreeWinPos='left'
