@@ -72,3 +72,8 @@ vim 里最基本的映射配置有 map、noremap、unmap、mapclear 几种。
     nnoremap <C-K> <C-W><C-K>
     nnoremap <C-H> <C-W><C-H>
     nnoremap <C-L> <C-W><C-L>
+
+阅读更多
+****************************
+
+http://vimcdoc.sourceforge.net/doc/map.html#:imap
