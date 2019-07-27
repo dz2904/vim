@@ -29,7 +29,7 @@ Vundle 安装插件的详细方法请参考 `链接 <vundle.html#id6>`_ 。
     autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
     " 开启/关闭 NERDTree 快捷键
-    map <C-f> :NERDTreeToggle<CR>
+    nnoremap <C-T> :NERDTreeToggle<CR>
 
     " 不显示 .pyc 文件
     let NERDTreeIgnore = ['\.pyc$']
