@@ -98,7 +98,7 @@ Vim 配置文件
     wincmd w
     autocmd VimEnter * wincmd w
     autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-    nnoremap <C-tab> :NERDTreeToggle<CR>
+    nnoremap <C-T> :NERDTreeToggle<CR>
     let g:NERDTreeDirArrowExpandable = '+'
     let g:NERDTreeDirArrowCollapsible = '-'
     let NERDTreeWinPos='left'
