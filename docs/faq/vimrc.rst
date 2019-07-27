@@ -81,7 +81,7 @@ Vim 配置文件
     highlight BadWhitespace ctermbg=red guibg=darkred
     au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
     
-    au BufNewfile,BufRead *.py
+    au BufNewfile,BufRead *.py, *.rst
     \ set tabstop=4 |
     \ set shiftwidth=4 |
     \ set expandtab |
