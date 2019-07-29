@@ -74,7 +74,7 @@ Vim 配置文件
     set encoding=utf-8
     set number
     set autoindent
-    syntax enable
+    syntax on
     set scrolloff=3
     " set cursorline
     
