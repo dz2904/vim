@@ -131,7 +131,7 @@
       7G  |   text text text text    |
           |   text text text text
           |   text text text text
-          ∨   text text text text   |
+          ∨  text text text text    |
               text text text text    |  G
               text text text text    |
               last line of a file    ∨
