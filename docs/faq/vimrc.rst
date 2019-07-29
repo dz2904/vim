@@ -78,6 +78,10 @@ Vim 配置文件
     " set cursorline
     syntax enable
     
+    " search setting
+    set hlsearch
+    set incsearch
+    
     highlight BadWhitespace ctermbg=red guibg=darkred
     au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
     
@@ -118,3 +122,10 @@ Vim 配置文件
     set laststatus=2
     set noshowmode
     set t_Co=256
+    
+    Plugin 'tmhedberg/SimpylFold'
+    set foldmethod=indent
+    set foldlevel=99
+    nnoremap <space> za
+    let g:SimpylFold_docstring_preview=1
+    
