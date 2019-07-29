@@ -4,14 +4,11 @@
 不管是插入或者删除字符，都需要将光标移动到合适的位置。Vim 有一大堆命令可以移动光标。本章只介绍最基本、最常用的一些命令。
 
 - 单词移动
-- 移动到行首或行尾
-- 移动到指定的字符
 - 括号匹配
+- 移动到指定的字符
+- 移动到行首或行尾
 - 移动到指定的行
-- 确定当前位置
 - 滚屏
-- 简单查找
-- 简单的查找模式
 - 使用标记
 
 单词移动
@@ -215,13 +212,13 @@
 
 ::
 
-          |  example text   ∧            |
+          |  example text   ↑             |
     33G   |  example text   |  CTRL-O     | CTRL-I
           |  example text   |             |
-          ∨  line 33 text  ∧            ∨
+          ↓  line 33 text   ↑             ↓
           |  example text   |             |
     /^The |  example text   |  CTRL-O     | CTRL-I
-          ∨  There you are |            ∨
+          ↓  There you are  |             ↓
              example text
 
 
