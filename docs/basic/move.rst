@@ -125,16 +125,16 @@
 
 ::
 
-          |   first line of a file   ∧
+          |   first line of a file   ↑
           |   text text text text    |
           |   text text text text    |  gg
       7G  |   text text text text    |
           |   text text text text
           |   text text text text
-          ∨  text text text text    |
+          ↓  text text text text     |
               text text text text    |  G
               text text text text    |
-              last line of a file    ∨
+              last line of a file    ↓
 
 另一个定位行的方法是使用带计数前缀的 ``%`` 命令。例如， ``50%`` 移动到文件的中间，而 ``90%`` 移动到差不多结尾的位置。
 
