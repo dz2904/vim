@@ -74,9 +74,9 @@ Vim 配置文件
     set encoding=utf-8
     set number
     set autoindent
-    syntax on
     set scrolloff=3
     " set cursorline
+    syntax on
     
     highlight BadWhitespace ctermbg=red guibg=darkred
     au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
