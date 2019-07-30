@@ -129,3 +129,5 @@ Vim 配置文件
     nnoremap <space> za
     let g:SimpylFold_docstring_preview=1
     
+    Plugin 'Vimjas/vim-python-pep8-indent'
+    
