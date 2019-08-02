@@ -111,8 +111,8 @@ Vim 配置文件
     "split navigations
     nnoremap <C-J> <C-W><C-J>
     nnoremap <C-K> <C-W><C-K>
-    nnoremap <C-L> <C-W><C-L>
     nnoremap <C-H> <C-W><C-H>
+    nnoremap <C-L> <C-W><C-L>
     
     Plugin 'maralla/completor.vim'
     let g:completor_python_binary = '/path/to/python/with/jedi/installed'
@@ -131,3 +131,12 @@ Vim 配置文件
     
     Plugin 'Vimjas/vim-python-pep8-indent'
     
+
+快捷键操作：
+
+<space>     折叠代码
+<CTRL-T>    打开关闭 NERDTree
+<CTRL-J>    跳转到下一个窗口
+<CTRL-K>    跳转到上一个窗口
+<CTRL-H>    跳转到左一个窗口
+<CTRL-L>    跳转到右一个窗口
