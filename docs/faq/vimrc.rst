@@ -134,9 +134,9 @@ Vim 配置文件
 
 快捷键操作：
 
-<space>     折叠代码
-<CTRL-T>    打开关闭 NERDTree
-<CTRL-J>    跳转到下一个窗口
-<CTRL-K>    跳转到上一个窗口
-<CTRL-H>    跳转到左一个窗口
-<CTRL-L>    跳转到右一个窗口
+- <space>     折叠代码
+- <CTRL-T>    打开关闭 NERDTree
+- <CTRL-K>    跳转到上方的分割窗口
+- <CTRL-J>    跳转到下方的分割窗口
+- <CTRL-H>    跳转到左侧的分割窗口
+- <CTRL-L>    跳转到右侧的分割窗口
