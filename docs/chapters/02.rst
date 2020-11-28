@@ -7,4 +7,7 @@
    :maxdepth: 2
    :glob:
 
-   ../plugin/*
+   ../plugin/vundle.rst
+   ../plugin/completor.rst
+   ../plugin/nerdtree.rst
+   ../plugin/powerline.rst

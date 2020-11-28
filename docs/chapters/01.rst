@@ -8,4 +8,11 @@
    :glob:
 
    基本操作命令 <http://data.dongxg.top/VimOperating.pdf>
-   ../basic/*
+   ../basic/menu.rst
+   ../basic/move.rst
+   ../basic/repeat.rst
+   ../basic/small.modify.rst
+   ../basic/search.rst
+   ../basic/replace.rst
+   ../basic/regular.expression.rst
+   ../basic/map.rst
