@@ -12,6 +12,7 @@
    ../basic/move.rst
    ../basic/repeat.rst
    ../basic/small.modify.rst
+   ../basic/copy.rst
    ../basic/search.rst
    ../basic/replace.rst
    ../basic/regular.expression.rst
