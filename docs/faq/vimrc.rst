@@ -130,6 +130,13 @@ Vim 配置文件
     let g:SimpylFold_docstring_preview=1
     
     Plugin 'Vimjas/vim-python-pep8-indent'
+
+    " 使用 fcitx5 输入法自动切换中英文输入
+    " autocmd InsertLeave * :silent !fcitx5-remote -c
+    " autocmd InsertEnter * :silent !fcitx5-remote -o
+    " 使用 ibus 输入法自动切换中英文输入
+    " ibus engine libpinyin
+    " ibus engine xkb:us::eng
     
 
 快捷键操作：
