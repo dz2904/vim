@@ -11,8 +11,10 @@ Powerline 是 vim、zsh、bash、tmux、IPython、Awesome、bar、fish、lemonba
 
 其配置以及配色方案用 JSON 写成。它是一种标准简易的文件格式，可以让用户配置 Powerline 支持的程序。
 
+
 安装和配置
 ************************************
+
 
 安装插件
 ====================================
@@ -56,20 +58,10 @@ Powerline 是 vim、zsh、bash、tmux、IPython、Awesome、bar、fish、lemonba
 
     mv 10-powerline-symbols.conf ~/.config/fontconfig/conf.d/
 
-.. note::
 
-    在最新的 Debian 10 gnome 环境下，没有找到以上的两个路径，新建路径放入配置文件也不起效，最后无奈只能放入全局配置文件下 ``/etc/fonts/conf.d/`` 。
+.. hint:: 安装字体补丁
 
-    网上找到的其他安装字体的方法：
-
-    ::
-
-        wget https://github.com/Lokaltog/powerline/raw/develop/font/PowerlineSymbols.otf
-        wget https://github.com/Lokaltog/powerline/raw/develop/font/10-powerline-symbols.conf
-        mkdir -p ~/.fonts/ && mv PowerlineSymbols.otf ~/.fonts/
-        fc-cache -vf ~/.fonts
-        mkdir -p ~/.config/fontconfig/conf.d/
-        mv 10-powerline-symbols.conf ~/.config/fontconfig/conf.d/
+    在 Gnome 终端下安装完之后箭头显示乱码，让人非常郁闷。需要安装支持 Powerline 的 `字体 <https://github.com/powerline/fonts>`_ ，然后在终端中设置字体后显示正常。
 
 
 配置
@@ -84,8 +76,4 @@ Powerline 是 vim、zsh、bash、tmux、IPython、Awesome、bar、fish、lemonba
     set t_Co=256
 
 
-安装字体补丁
-====================================
-
-在 Gnome 终端下安装完之后箭头显示乱码，让人非常郁闷。需要安装支持 Powerline 的 `字体 <https://github.com/powerline/fonts>`_ ，然后在终端中设置字体后显示正常。
 

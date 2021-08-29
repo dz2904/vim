@@ -15,5 +15,6 @@
    ../basic/copy.rst
    ../basic/search.rst
    ../basic/replace.rst
+   ../basic/save.as.rst
    ../basic/regular.expression.rst
    ../basic/map.rst
