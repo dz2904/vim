@@ -18,3 +18,4 @@
    ../basic/save.as.rst
    ../basic/regular.expression.rst
    ../basic/map.rst
+   ../basic/autocmd.rst

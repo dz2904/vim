@@ -1,24 +1,34 @@
 Vim 配置文件
 #############################
 
-首先，安装 Vundle 插件管理器 ``git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim`` 。
+同时安装 vim 和 gvim，vim 主要用于在终端中修改文件和编程，gvim 主要用于输入中文的文本编辑。
+
+环境要求：
+
+- vim 8.0 及以上版本
+- vim python3 支持
+- gvim 图形界面
+- git 支持
+- gnome 桌面和 ibus 输入法
+
+首先，安装 Vundle 插件管理器 
+
+.. highlight:: none
+
+::
+
+    git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 然后，将配置文件复制到 ``～/.vimrc`` 中。
 
 最后，打开 vim 键入 ``:PluginInstall`` 命令安装所以插件。
 
-要求：
-
-- vim 8.0 及以上版本
-- git 支持
-- vim python3 支持
-
 .. note::
     
-    Powerline 需要参考官方文档安装插件及字体， `参考链接 <https://powerline.readthedocs.io/en/latest/installation/linux.html>`_ 。
-    在 Debian 10 环境中，配置文件直接放入 /etc/fonts/conf.d/ 目录下。
-    
-    completor.vim 需要 jedi 支持。
+    - :doc: `Powerline <../plugin/powerline.rst>`_ 需要安装合适的字体才能完美运行，建议使用 ``Source Code Pro for Powerline`` 字体
+    - :doc: `completor.vim <../plugin/completor.rst>`_ 需要 jedi 支持
+    - solarized 配色文件（solarized.vim）需要手动配置到系统目录
+
 
 基本配置文件
 *****************************
@@ -77,28 +87,17 @@ Vim 配置文件
     set scrolloff=3
     " set cursorline
     syntax enable
-    
+
     " search setting
     set hlsearch
     set incsearch
-    
+
     highlight BadWhitespace ctermbg=red guibg=darkred
     au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
-    
-    au BufNewfile,BufRead *.py,*.pyw,*.rst
-    \ set tabstop=4 |
-    \ set shiftwidth=4 |
-    \ set expandtab |
-    \ set textwidth=79 |
-    \ set fileformat=unix
-    
-    au BufNewfile,BufRead *.js,*.html,*.css,*.htm
-    \ set tabstop=2 |
-    \ set shiftwidth=2 |
-    \ set expandtab
-    
+
+
     Plugin 'scrooloose/nerdtree'
-    autocmd vimenter * NERDTree
+    " autocmd vimenter * NERDTree
     wincmd w
     autocmd VimEnter * wincmd w
     autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
@@ -107,43 +106,62 @@ Vim 配置文件
     let g:NERDTreeDirArrowCollapsible = '-'
     let NERDTreeWinPos='left'
     let NERDTreeWinSize=25
-    
+
     "split navigations
     nnoremap <C-J> <C-W><C-J>
     nnoremap <C-K> <C-W><C-K>
     nnoremap <C-H> <C-W><C-H>
     nnoremap <C-L> <C-W><C-L>
-    
+
     Plugin 'maralla/completor.vim'
     let g:completor_python_binary = '/path/to/python/with/jedi/installed'
-    
-    " Plugin 'Lokaltog/powerline'
-    set rtp+=~/.local/lib/python3.7/site-packages/powerline/bindings/vim/
+
+    " 显示状态栏
     set laststatus=2
     set noshowmode
-    set t_Co=256
-    
+
     Plugin 'tmhedberg/SimpylFold'
     set foldmethod=indent
     set foldlevel=99
     nnoremap <space> za
     let g:SimpylFold_docstring_preview=1
-    
+
     Plugin 'Vimjas/vim-python-pep8-indent'
+    Bundle 'altercation/vim-colors-solarized'
 
     " 使用 fcitx5 输入法自动切换中英文输入
     " autocmd InsertLeave * :silent !fcitx5-remote -c
     " autocmd InsertEnter * :silent !fcitx5-remote -o
-    " 使用 ibus 输入法自动切换中英文输入
-    " ibus engine libpinyin
-    " ibus engine xkb:us::eng
-    
 
-快捷键操作：
+    " 禁用响铃
+    set vb t_vb=
 
-- <space>     折叠代码
-- <CTRL-T>    打开关闭 NERDTree
-- <CTRL-K>    跳转到上方的分割窗口
-- <CTRL-J>    跳转到下方的分割窗口
-- <CTRL-H>    跳转到左侧的分割窗口
-- <CTRL-L>    跳转到右侧的分割窗口
+    if(has("gui_running"))
+        set guifont=CamingoCode\ 16
+        colorscheme solarized
+        " 打开文件时修改默认路径为文件所在路径
+        exec 'cd' '%:p:h'
+        " 自动切换中英文输入法
+        autocmd GUIEnter * :silent !ibus engine xkb:us::eng
+        autocmd InsertLeave * :silent !ibus engine xkb:us::eng
+        autocmd InsertEnter * :silent !ibus engine libpinyin
+        autocmd VimLeave * :silent !ibus engine libpinyin
+        " 复制粘贴
+        nnoremap <C-V> "+p
+        vnoremap <C-C> "+y
+    else
+        set guifont=CamingoCode\ 16
+        " Powerline
+        set  rtp+=~/.local/lib/python3.9/site-packages/powerline/bindings/vim/
+        au BufNewfile,BufRead *.py,*.pyw,*.rst
+        \ set tabstop=4 |
+        \ set shiftwidth=4 |
+        \ set expandtab |
+        \ set textwidth=79 |
+        \ set fileformat=unix
+        
+        au BufNewfile,BufRead *.js,*.html,*.css,*.htm
+        \ set tabstop=2 |
+        \ set shiftwidth=2 |
+        \ set expandtab
+    endif
