@@ -6,7 +6,6 @@ Vim 配置文件
 - vim 8.0 及以上版本
 - vim python3 支持
 - git 支持
-- gnome 桌面和 ibus 输入法
 
 首先，安装 Vundle 插件管理器
 
@@ -20,10 +19,10 @@ Vim 配置文件
 
 最后，打开 vim 键入 ``:PluginInstall`` 命令安装所以插件。
 
-.. note::
+.. hint::
 
-    - :doc:`Powerline <../plugin/powerline>`_ 需要安装合适的字体才能完美运行，建议使用 ``Source Code Pro for Powerline`` 字体
-    - :doc:`completor.vim <../plugin/completor>`_ 需要 jedi 支持
+    - :doc:`Powerline <../plugin/powerline>` 需要安装合适的字体才能完美运行，建议使用 ``Source Code Pro for Powerline`` 字体
+    - :doc:`completor.vim <../plugin/completor>` 需要 jedi 支持
     - solarized 配色文件（solarized.vim）需要手动配置到系统目录
     - 输入法自动切换添加的文件格式脚本中，最实用
 
