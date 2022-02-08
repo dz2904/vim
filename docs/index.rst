@@ -8,3 +8,4 @@ vim 常用操作
 
    preface
    chapters/*
+   references
